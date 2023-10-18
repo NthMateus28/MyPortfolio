@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 
 /* Importe as fontes Montserrat com peso 600 (negrito) e 300 (fino) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
 
-*{
+@import url(./style.css);
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -19,8 +21,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #E6ECF8;
-    margin-bottom: 50px; /* Alterei 'padding-bottom' para 'margin-bottom' para ajustar o espaçamento abaixo do cabeçalho */
+    border-bottom: 1px solid #e6ecf8;
+    margin-bottom: 50px;
 }
 
 .options {
@@ -29,7 +31,6 @@ header {
     display: flex;
 }
 
-/* Estilos para o botão de menu */
 .menu-button {
     display: none;
     background: none;
@@ -38,7 +39,6 @@ header {
     cursor: pointer;
 }
 
-/* Estilos para a lista de itens de menu em telas maiores */
 .options ul {
     list-style: none;
     display: flex;
@@ -49,11 +49,11 @@ header {
     list-style-type: none;
 }
 
-.options button{
+.options button {
     background-color: aliceblue;
     padding: 20px;
     border-radius: 40px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     border: 0;
     cursor: pointer;
@@ -61,14 +61,13 @@ header {
 }
 
 .options button:hover {
-    background-color: #7fffd4; 
+    background-color: #7fffd4;
 }
 
 .options button:hover {
-    background-color: #7fffd4; 
+    background-color: #7fffd4;
 }
 
-/* Estilos do Menu para o menu em telas menores */
 @media screen and (max-width: 768px) {
     .options {
         flex-direction: column;
@@ -79,7 +78,7 @@ header {
         overflow: hidden;
         position: absolute;
         width: 100%;
-        right: 0; 
+        right: 0;
     }
 
     .menu-button {
@@ -95,11 +94,11 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 20px; 
+        padding-top: 20px;
     }
 
     .options li {
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
 
     .options.active {
@@ -117,7 +116,6 @@ header {
     width: 40px;
 }
 
-/* Estilos para telas menores (telefone) */
 @media screen and (max-width: 768px) {
     .options {
         margin-right: 20px;
@@ -128,7 +126,7 @@ header {
     }
 }
 
-.Initialformulario{
+.Initialformulario {
     margin-top: 100px;
     text-align: center;
     width: 100%;
@@ -140,9 +138,32 @@ header {
 
 .title {
     margin-top: 50px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
     margin: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .Initialformulario {
+        margin-top: 60px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Initialformulario img {
+        width: 75px;
+    }
+
+    .title {
+        margin-top: 50px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        margin: 50px;
+    }
+
+    .title h1 {
+        font-size: 25px;
+    }
 }
 
 .formulario {
@@ -151,20 +172,20 @@ header {
     margin: 0 auto;
 }
 
-.forms{
+.forms {
     display: flex;
 }
 
-.name{
+.name {
     width: 100%;
     display: block;
     margin-right: 15px;
     margin-top: 40px;
 }
 
-.input{
+.input {
     width: 100%;
-    background-color: #E6ECF8;
+    background-color: #e6ecf8;
     border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 5px;
     outline: none;
@@ -174,7 +195,7 @@ header {
     color: #333;
 }
 
-.forms span{
+.forms span {
     position: absolute;
     font-size: 0.8em;
     font-weight: 700;
@@ -185,72 +206,141 @@ header {
     transition: all 200ms ease;
 }
 
-input:focus{
+input:focus {
     background-color: #f1f3f9;
     border: 2px solid #333;
 }
 
-.name .span-active{
+.name .span-active {
     font-size: 0.7em;
     margin: 8px 10px;
 }
 
-body > form > label > span{
+body > form > label > span {
     font-weight: 700;
     margin-left: 30px;
 }
 
-/* Estilos para a label */
 label {
-    display: block; /* Faz com que a label seja exibida como bloco (uma linha abaixo da outra) */
-    font-weight: bold; /* Deixa o texto em negrito */
-    margin-bottom: 10px; /* Adiciona um espaçamento na parte inferior da label */
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.formsText{
+.formsText {
     display: flex;
     flex-direction: column;
+    margin-top: 25px;
 }
 
-/* Estilos para a caixa de texto */
 .caixa-de-texto {
-    width: 100%; /* Defina a largura para 100% para corresponder aos outros campos */
+    width: 98.5%;
     padding: 10px;
     margin: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     color: #333;
-    height: 250px; /* Aumenta a altura da caixa de texto */
-    line-height: 30px; /* Alinha o texto verticalmente ao topo */
-    text-align: left; /* Alinha o texto horizontalmente ao início */
-    vertical-align: top; /* Alinha o texto verticalmente ao topo */
+    height: 250px;
+    text-align: left;
+    vertical-align: top;
     margin-bottom: 100px;
 }
 
-/* Responsivo */
 @media screen and (max-width: 768px) {
     .formulario {
-        width: 80%; /* Reduza a largura do formulário em telas menores */
+        width: 80%;
     }
 
-    .forms{
+    .forms {
         display: flex;
         flex-direction: column;
     }
 
     .name {
-        margin-top: 20px; /* Ajuste a margem superior dos campos de nome em telas menores */
+        margin-top: 20px;
         display: flex;
     }
 
     .caixa-de-texto {
-        height: 150px; /* Reduza a altura da caixa de texto em telas menores */
+        height: 150px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .formulario {
         width: 90%; /* Reduza ainda mais a largura do formulário em telas muito pequenas */
+    }
+}
+
+.btn {
+    max-width: 100%;
+    text-align: center;
+}
+
+#enviar {
+    width: 40%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#enviar:hover {
+    background-color: #7fffd4;
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #enviar {
+        width: 100%;
+    }
+}
+
+.contato {
+    border-top: 1px solid #e6ecf8;
+    text-align: center;
+    margin-top: 150px;
+    padding-top: 150px;
+}
+
+.btn-contact {
+    margin-top: 100px;
+    width: 25%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.btn-contact:hover {
+    background-color: #7fffd4;
+}
+
+@media screen and (max-width: 768px) {
+    .contato {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .btn-contact {
+        width: 90%;
+    }
+
+    .contato h1 {
+        font-size: 20px;
+        margin: 5px;
     }
 }
